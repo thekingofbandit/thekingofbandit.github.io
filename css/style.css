@@ -3,6 +3,8 @@
 Primary style
 
 -------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -15,7 +17,7 @@ body {
   font-size: 1.6rem;
   color: #edeade;
   background-color: #1E6C80;
-  font-family: sans-serif;
+  font-family: 'Caveat', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -44,7 +46,7 @@ Portfolio Navigation
 .cd-3d-portfolio-navigation h1 {
   font-size: 2rem;
   margin-bottom: .6em;
-  font-family: "Lora", serif;
+  font-family: 'Caveat', cursive, serif;
   font-weight: bold;
 }
 .cd-3d-portfolio-navigation li {
@@ -370,7 +372,7 @@ Portfolio Projects
   color: #edeade;
   font-size: 2.2rem;
   font-weight: bold;
-  font-family: "Lora", serif;
+  font-family: 'Caveat', cursive, serif;
 }
 .cd-3d-portfolio .projects .project-content {
   position: absolute;
