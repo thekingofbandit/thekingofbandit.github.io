@@ -14,7 +14,7 @@ html {
 body {
   font-size: 1.6rem;
   color: #edeade;
-  background-color: #43202f;
+  background-color: #1E6C80;
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -54,18 +54,18 @@ Portfolio Navigation
 .cd-3d-portfolio-navigation li a {
   display: inline-block;
   color: #edeade;
-  border: 2px solid #391b28;
+  border: 2px solid #eaeaea;
   padding: .6em;
   -webkit-transition: all .2s;
   transition: all .2s;
 }
 .cd-3d-portfolio-navigation li a:hover {
-  border-color: #72a987;
+  border-color: #eaeaea;
 }
 .cd-3d-portfolio-navigation li .selected {
-  color: #edeade;
-  background: #72a987;
-  border-color: #72a987;
+  color: #1e6b80;
+  background: #eaeaea;
+  border-color: #eaeaea;
   cursor: default;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
@@ -394,7 +394,7 @@ Portfolio Projects
   max-width: 800px;
   margin: 2em auto;
   line-height: 1.6;
-  color: #694d59;
+  color: #000000;
 }
 .cd-3d-portfolio .projects.project-has-transition .row > li {
   /* the project-has-transition class is used to add a transition to the tranform property of the single projects - it's added when a project is selected (before opening it) and removed when a project is colsed (when the closing animation is finished) */
