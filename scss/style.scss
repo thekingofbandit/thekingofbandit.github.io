@@ -6,6 +6,8 @@
 
 @import '../partials/layout'; // responsive grid and media queries
 
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+
 /* -------------------------------- 
 
 Primary style
@@ -26,7 +28,7 @@ body {
 	}
 	color: $color-3; // variables inside partials > _variables.scss
 	background-color: $color-1;
-	font-family: sans-serif;
+	font-family: $heading;
 	@include font-smoothing;
 }
 
