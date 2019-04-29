@@ -1,6 +1,6 @@
 site_name: Smartdeskers
 theme:
-  name: 'material'
+  name: 'material-components'
   palette:
     primary: 'Teal'
     accent: 'Teal'
