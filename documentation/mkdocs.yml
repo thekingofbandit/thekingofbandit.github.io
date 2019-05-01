@@ -1,19 +1,23 @@
-site_name: My Docs
+site_name: Cheat Sheet
 site_url: http://thekingofbandit.github.io
 site_author: thekingofbandit
 site_description: personal notes for tkob.esy.es
 extra_javascript: [js/extra.js]
 extra_css: [css/extra.css]
-repo_url: 'https://github.com/thekingofbandit/thekingofbandit.github.io/tree/master/Documentation'
-repo_name: 'thekingofbandit'
-copyright: 'Mohammad Khanafi'
-google_analytics: ['UA-36723568-3', 'mkdocs.org']
+repo_url: 'https://github.com/thekingofbandit/thekingofbandit.github.io'
+repo_name: 'thekingofbandit/thekingofbandit.github.io'
+copyright: ''
+google_analytics: ['UA-36723568-3', 'thekingofbandit.github.io']
 nav:
     - Home: index.md
     - About: about.md
 theme:
-    name: slate
+    name: material
     custom_dir: custom_theme/
+    favicon: 'assets/images/favicon.ico'
+    palette:
+      primary: 'pink'
+      accent: 'pink'
 markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.betterem:
@@ -31,3 +35,11 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/thekingofbandit'
+    - type: 'twitter'
+      link: 'https://twitter.com/thekingofbandit'
+    - type: 'linkedin'
+      link: 'https://linkedin.com/in/khanafi'

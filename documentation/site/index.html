@@ -1,187 +1,978 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="personal notes for tkob.esy.es">
+      
+      
+        <link rel="canonical" href="http://thekingofbandit.github.io/">
+      
+      
+        <meta name="author" content="thekingofbandit">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.2.0">
+    
+    
+      
+        <title>Cheat Sheet</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.750b69bd.css">
+      
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+      
+      
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>My Docs</title>
-        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <link href="css/extra.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
-
-    <body class="homepage">
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href=".">My Docs</a>
-                </div>
-
-                <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a href=".">Home</a>
-                            </li>
-                            <li >
-                                <a href="about/">About</a>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="disabled">
-                                <a rel="next" >
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="about/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
+        <meta name="theme-color" content="#e91e63">
+      
+    
+    
+      <script src="assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="css/extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-36723568-3", "thekingofbandit.github.io")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="pink" data-md-color-accent="pink">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#home" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://thekingofbandit.github.io" title="Cheat Sheet" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Cheat Sheet
+            </span>
+            <span class="md-header-nav__topic">
+              Home
+            </span>
+          
         </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
 
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#welcome-to-mkdocs">Welcome to MkDocs</a></li>
-            <li><a href="#commands">Commands</a></li>
-            <li><a href="#project-layout">Project layout</a></li>
+
+  
+
+<a href="https://github.com/thekingofbandit/thekingofbandit.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    thekingofbandit/thekingofbandit.github.io
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://thekingofbandit.github.io" title="Cheat Sheet" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Cheat Sheet
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/thekingofbandit/thekingofbandit.github.io/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    thekingofbandit/thekingofbandit.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Home
+      </label>
+    
+    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+      Home
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topics" title="Topics" class="md-nav__link">
+    Topics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-layout" title="Project layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#books" title="Books" class="md-nav__link">
+    Books
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" title="Links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codes" title="Codes" class="md-nav__link">
+    Codes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-mkdocs" title="Start mkdocs" class="md-nav__link">
+    Start mkdocs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-mkdocs" title="Build mkdocs" class="md-nav__link">
+    Build mkdocs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-event" title="Create Event" class="md-nav__link">
+    Create Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-event-scheduler" title="Enable Event Scheduler" class="md-nav__link">
+    Enable Event Scheduler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-scheduler-status" title="Event Scheduler Status" class="md-nav__link">
+    Event Scheduler Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#watch-processlist" title="Watch Processlist" class="md-nav__link">
+    Watch Processlist
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#facebook-api-key-secret" title="Facebook API Key Secret" class="md-nav__link">
+    Facebook API Key Secret
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-api-key-secret" title="Google API Key Secret" class="md-nav__link">
+    Google API Key Secret
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkedin-api-key-secret" title="LinkedIn API Key Secret" class="md-nav__link">
+    LinkedIn API Key Secret
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twitter-api-key-secret" title="Twitter API Key Secret" class="md-nav__link">
+    Twitter API Key Secret
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-using-api" title="Method Using API" class="md-nav__link">
+    Method Using API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retropie-rom" title="RetroPie ROM" class="md-nav__link">
+    RetroPie ROM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
     </ul>
-</div></div>
-                <div class="col-md-9" role="main">
+  
+</nav>
+    
+  </li>
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topics" title="Topics" class="md-nav__link">
+    Topics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-layout" title="Project layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#books" title="Books" class="md-nav__link">
+    Books
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" title="Links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codes" title="Codes" class="md-nav__link">
+    Codes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-mkdocs" title="Start mkdocs" class="md-nav__link">
+    Start mkdocs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-mkdocs" title="Build mkdocs" class="md-nav__link">
+    Build mkdocs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-event" title="Create Event" class="md-nav__link">
+    Create Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-event-scheduler" title="Enable Event Scheduler" class="md-nav__link">
+    Enable Event Scheduler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-scheduler-status" title="Event Scheduler Status" class="md-nav__link">
+    Event Scheduler Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#watch-processlist" title="Watch Processlist" class="md-nav__link">
+    Watch Processlist
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#facebook-api-key-secret" title="Facebook API Key Secret" class="md-nav__link">
+    Facebook API Key Secret
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-api-key-secret" title="Google API Key Secret" class="md-nav__link">
+    Google API Key Secret
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linkedin-api-key-secret" title="LinkedIn API Key Secret" class="md-nav__link">
+    LinkedIn API Key Secret
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twitter-api-key-secret" title="Twitter API Key Secret" class="md-nav__link">
+    Twitter API Key Secret
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-using-api" title="Method Using API" class="md-nav__link">
+    Method Using API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retropie-rom" title="RetroPie ROM" class="md-nav__link">
+    RetroPie ROM
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/thekingofbandit/thekingofbandit.github.io/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="home">Home</h1>
+<p>For full documentation visit <a href="https://thekingofbandit.github.io/Documentation">thekingofbandit.github.io</a>.</p>
+<h2 id="topics">Topics</h2>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
+<li><code>update Godaddy DNS</code> - Update IP Address to GoDaddy Registered Domain.</li>
+<li><code>Start Alpha WAS</code> - Start Alpha Web Aplication Server (WAS).</li>
+<li><code>Restart Alpha WAS</code> - Restart Alpha WAS using batch file.</li>
+<li><code>Deploy Dump file</code> - Restore Dump File.</li>
+<li><code>Copy File using robocopy</code> - Copy file using robocopy.</li>
+<li><code>Copy File using xcopy</code> - Copy file using xcopy.</li>
+<li><code>Extract tar.gz using batch file</code> - Extract tar.gz file using batch file.</li>
+<li><code>List file to .txt</code> - list files in a folder and extract to .txt file.</li>
+<li><code>Upload files using DropBox API</code> - Upload files to DropBox using API.</li>
+<li><code>Split CSV files</code> - Split a CSV into separate files.</li>
+<li><code>Create SSH Account</code> - Installing SSH and create an account.</li>
+<li><code>Create Cert</code> - Create cert identifier.</li>
+<li><code>ZNC Config enabled log</code> - Setup ZNC with logging enabled.</li>
+<li><code>Create S3 Bucket</code> - Setup S3 Bucket.</li>
+<li><code>Upload a File in S3 using alpha</code> - Upload files in S3 Bucket.</li>
+<li><code>Login using 3rd Party in Alpha</code> - HTTPS,  domain like .com required.</li>
+<li><code>Upgrade python in ubuntu</code> - Upgrade python in ubuntu.</li>
+<li><code>Change Favicon in mkdocs</code> - Change favicon in mkdocs.</li>
 </ul>
 <h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
+<pre><code>mkdocs.yml          # The configuration file.
 docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
-        </div>
+    index.md        # The documentation homepage.
+    about.md        # About
+    css/
+        extra.css   #extra css for customise
+    js/
+        extra.js    #extra javascript for customise
+custom_theme
+    img/favicon.ico #custom favicon
+</code></pre>
+<h2 id="books">Books</h2>
+<ul>
+<li><a href="https://thekingofbandit.github.io">linux PDF</a></li>
+<li><a href="https://thekingofbandit.github.io">Guide Front-End 2019</a></li>
+<li><a href="https://thekingofbandit.github.io">Guide Front-End 2018</a></li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://thekingofbandit.github.io">thekingofbandit.github.io</a></li>
+<li><a href="https://mariadb.com/kb/en/library/server-system-variables/#lower_case_table_names">Lower Case Table</a></li>
+<li><a href="https://ubuntu.com">ubuntu</a></li>
+<li><a href="https://thekingofbandit.github.io">Facebook API KEY</a></li>
+<li><a href="https://thunix.net/~amcclure/speedtest/example-customSettings2.html">Speedtest</a></li>
+</ul>
+<h2 id="codes">Codes</h2>
+<h3 id="start-mkdocs">Start mkdocs</h3>
+<div class="highlight"><pre><span></span>mkdocs serve
+</pre></div>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = ".",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
-        </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+<h3 id="build-mkdocs">Build mkdocs</h3>
+<div class="highlight"><pre><span></span>mkdocs build
+</pre></div>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+<h3 id="create-event">Create Event</h3>
+<div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="n">EVENT</span> <span class="n">CreateDailyProfile</span>
+<span class="k">ON</span> <span class="n">SCHEDULE</span> <span class="n">EVERY</span> <span class="mi">1</span> <span class="n">DAY</span>
+<span class="n">STARTS</span> <span class="s1">&#39;2018-10-24 11:45:00.000&#39;</span>
+<span class="k">ON</span> <span class="n">COMPLETION</span> <span class="n">PRESERVE</span>
+<span class="n">ENABLE</span>
+<span class="n">COMMENT</span> <span class="s1">&#39;start 11:45  +- 30 menit&#39;</span>
+<span class="n">DO</span> <span class="k">CALL</span> <span class="nf">LCCI_DoAll</span><span class="p">();</span>
+</pre></div>
+
+<h3 id="enable-event-scheduler">Enable Event Scheduler</h3>
+<div class="highlight"><pre><span></span><span class="kt">SET</span> <span class="n">GLOBAL</span> <span class="n">event_scheduler</span> <span class="o">=</span> <span class="k">ON</span><span class="p">;</span>
+</pre></div>
+
+<h3 id="event-scheduler-status">Event Scheduler Status</h3>
+<div class="highlight"><pre><span></span><span class="k">SHOW</span> <span class="n">VARIABLES</span>
+<span class="k">WHERE</span> <span class="n">VARIABLE_NAME</span> <span class="o">=</span> <span class="s1">&#39;event_scheduler&#39;</span><span class="p">;</span>
+</pre></div>
+
+<h3 id="watch-processlist">Watch Processlist</h3>
+<div class="highlight"><pre><span></span><span class="n">mysqladmin</span> <span class="o">-</span><span class="n">u</span> <span class="n">root</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">i</span> <span class="mi">1</span> <span class="n">processlist</span><span class="p">;</span>
+</pre></div>
+
+<h3 id="facebook-api-key-secret">Facebook API Key Secret</h3>
+<div class="highlight"><pre><span></span>CzMUqcL/HDzqwOPoXTpCHIrmjiwm+UxPZVel5pZppXrVhMPWN44+e9BUOT7u6a4OYmDKkPDuoc2wjykpKEvYOsa9rTRJ+xQWBe9Ba3BkfQR1usZoJCDA3HBxv7osTbXzahVnjnHCePA0x/C1PuVGbsJqvxt3L2zat/rMkEjGv6ROa7nhr6YZ+F2b9DwUqr3JiR6HtMajSHBZEISnqzN41C28Rskc33bZ7ZRA+KpJDWtCf1rKxHCuaBMoa+v0iWrrhnnftV1Dn36fyaGTKa5mQATU3FTP09LOw0igAY8QiuLlNoTGGvndvd5CuuMu75+YwU8zGfqpYLnqpa0sBNoWh9b89OC9WdIqB34PlY5nLNNQYBpJqt7iC/0bNKo5j1voJSMWLQ7YZcxVXFo6kDT0Ghj7rC8dGgGdzf5c+FAGYt3AFwmHTKDJgTompDsglfNsF5bIUgBcZGhzA53MyicBBIwcIsRfTUfpO+vPPkzQvpU=
+</pre></div>
+
+<h3 id="google-api-key-secret">Google API Key Secret</h3>
+<div class="highlight"><pre><span></span>CzMUqcL/HDzH9RDac/XPHG3uv2aoZjHAt+vVyRPOXRkojG8QRR25X9VaCuHxLhdazq4vvxtvAuCrpy+Cc10d5guV5HNiily3be4Qr+wkU3ZVi90yQdfILDtiif/RxhIFvsYOkRH/J+1nT4QtxB9uFv6jgACPF43BhVVyYSEgzOmgCACDh4b7MxlxRO9BtXNBo+bNNr3vMAUz6EzbqulGH3nXDFEn2vvyccznrXkqMRxvqSZEvXbAyjmzF2h+nJZD26suCuYnAU3WoQkyAF2MsAYidyxucpvHQVV4bcESs3RrSKzctYpDNHXkbtusNFTt1eR2INj0Ek6LMZL/T2avOnwKWmeRyEIuoDrECBJDBBxfzFPRxMgPwjWxeQJ3Hmu/QMkcOS58HMp6DTpMyvE3M6S1Xj4d2JbEGLQAKCZjlQ9CsZomHIl0/NCcwalZOvT6HBcmxGG5qXq8FM+qJtDjLc47Tu/qAhdx4P6ZXC2UeXTCfzZIFUnzWktmxrNyPzvq/3LDCz1h2uoEu6X4ndqWKZpQ5STl9wVfeBc0+G0E9DU=
+</pre></div>
+
+<h3 id="linkedin-api-key-secret">LinkedIn API Key Secret</h3>
+<div class="highlight"><pre><span></span>CzMUqcL/HDzKB9mrRxLMk29OBQTIHGRW8tHBNHEgTiIL9geIU5vCsQCdfhXka3YBKYhSnLQBPS79eRjE2oiE10h+u7IJPpxs4naBZq2WvWGYjVzGeiq6uBz+iKnUNugarDUS48xWykXZKNGRckd/8BrlTi0TYCdqhrD05v8vH/sPlIrckw64/nZjYOp6+JDMFrd5VUzTKq59DEKQoLk0gAA0h8kkrsgptxdsuV1gRKWIH+2fl/msaKCmj5WwgvrL71lj1Q3RrjP6Bl4dTIBkNFCSDs+jfvGIbSnVrLa++SiNWsAXRa+A/bzzhIl/F+Lm11XFRTn2cddTAz1Fpqsf/5AFFJor48mTNa6z/Fg6wzO3Nynu6rO6Et2FNw9tx5sN5XWYtz+16Dxoyfo5mr0/s7mc/dUJh070cu2S/QWKa6r2zoqtjfu+HIyDxDQZ4Sol1zNVPAIBY2u4euXFs/NkBYwKrLJlrVes
+</pre></div>
+
+<h3 id="twitter-api-key-secret">Twitter API Key Secret</h3>
+<div class="highlight"><pre><span></span>CzMUqcL/HDyGNpl3Zmfj35fmKuEud+7dK1X9i6P5gj3QLPkJ9dTY1/TShS2NaNN++7K/7HXl9Ca9m2/gYjG90fyQoh+fKJAJ/Vk8+39U27dkvXSHvtx5O0aUBWOQPOVi/r0S8EPV9y5D3+kilLT2Q0yFZzOwZGRjkrvpuhW75hduacdI7BAjb6ifpR6j99yHz/iWvxxt0g+1ZaIIW/Izey602l/gBSvKzBY86ZzTxH1YMg+czZl0XL4DHmbUa9Tzv/MSifEzNX3SDZmnE8qCFIKgxGr0B7tSKMmJA9HESBsIlCIWS/NxL9AeThVT0itLc10OkrGb3+CsbPMXfhVbl3U41yYiq5DK0DqrQMQm4T9t0ccSP/dtN6pgd4njbaa/zEE3uY+cDP2nvNbm2vkgOiWwv8lWgonPEXHKxA4HOAmjCz+iMHRHSNJj5SToywo58PT6rWGwabvmBDq+ocObEa1yfYycau4AanroefIYRKp3UvMJajieT/f+XDGbam7uILYilszV1N3hKk8WurKqS9gSWLvMg/mG
+</pre></div>
+
+<h3 id="method-using-api">Method Using API</h3>
+<div class="highlight"><pre><span></span>https://console.developers.google.com/cloud-resource-manager?pli=1
+Here is your client ID
+1019936097335-psrtmvk7scs2osg3i4skomgjlu6n35l5.apps.googleusercontent.com
+Here is your client secret
+HR4nyIcdO0F72-vkTmhL5Hzv
+
+facebook
+App ID
+151395095276478
+App Secret
+e703b9281f35e18b6be33f005276d023
+
+
+Test UsersDeleteAdd
+    Name    User ID Email   
+    Emma Alcdhbagbbfgg Bharambesky  100034821722677 pyibmewurk_1552386389@tfbnw.net
+
+
+
+&lt;script&gt;
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : &#39;151395095276478&#39;,
+      cookie     : true,
+      xfbml      : true,
+      version    : &#39;v3.2&#39;
+    });
+
+    FB.AppEvents.logPageView();   
+
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = &quot;https://connect.facebook.net/en_US/sdk.js&quot;;
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));
+&lt;/script&gt;
+
+
+
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+
+
+{
+    status: &#39;connected&#39;,
+    authResponse: {
+        accessToken: &#39;...&#39;,
+        expiresIn:&#39;...&#39;,
+        signedRequest:&#39;...&#39;,
+        userID:&#39;...&#39;
+    }
+}
+
+
+
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+Application name: salesforce
+Client ID: 86qn9b1o6ufhhd
+Created: 3/12/2019
+Company: Data Driven Systems
+Description:
+Salesforce Built in ALpha
+App logo:
+SDK settings
+
+JavaScript
+Valid SDK domains:
+http://www.techshelf.co.uk/
+Client ID:
+86qn9b1o6ufhhd
+Client Secret:
+BfAo6cEhIJo0pJX2
+
+
+POST /oauth/v2/accessToken HTTP/1.1
+Host: www.linkedin.com
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=authorization_code&amp;code=987654321&amp;redirect_uri=https%3A%2F%2Fwww.myapp.com%2Fauth%2Flinkedin&amp;client_id=123456789&amp;client_secret=shhdonottell
+
+
+https://docs.microsoft.com/en-gb/linkedin/shared/authentication/authorization-code-flow?context=linkedin/consumer/context
+</pre></div>
+
+<h3 id="retropie-rom">RetroPie ROM</h3>
+<div class="highlight"><pre><span></span>PACK FULL SET ROM EU / FR (MikOzzZ et Ano Nyme)
+
+
+Retrogaming &quot; Recalbox, Retropie, Attract Mode, Batocera, Happi, Hyperspin&quot;, Raspberry pi, Odroid, console Oldgen et Nextgen, musique, ciné, Série, BD etc...... 
+
+&gt; Fullset EU/Fr Gameboy
+https://mega.nz/#!48RVDBKD!P0AUsB_SQLTQTadnC43nc8MIMkDk73dXATw6rzh0TzU
+
+&gt; Fullset Eu/Fr Gameboy Color
+https://mega.nz/#!k9wkiK7C!fMgA6Q1Lh-CVErYK8mbJy5dWW-ZtdRb39DTQg8hnm9c
+
+&gt; Fullset Eu/Fr Gameboy Advance
+https://mega.nz/#!BxZWVKiR!91b3_Qd6pJHgdoHcbj-m1UUlX37tOnf45rWBZazj9xQ
+
+
+&gt; Fullset Eu/Fr Super Nintendo
+https://mega.nz/#!h0AD3RYa!73GkI_caZN9XHCPQjIZ3mqZ8fxf0KbRSi54jLznHBes
+
+
+&gt; Fullset Eu/Fr Nes
+https://mega.nz/#!8h4A0Tyb!Ry2Xm8i6GQkuBjStGwRulrYsbJQ67XkFCTrdnYabs_Q
+
+
+&gt; Fullset Nintendo Virtual Boy
+https://mega.nz/#!MsIkADLI!QXoeGEuy7t1Blj7SgH4nWR76B28fbL5On3KJvaVFC1E
+
+
+&gt; Fullset Eu/Fr Sega GameGear
+https://mega.nz/#!BlJxRT7Q!QsNi3OJF-e_NaorgfrWFugJ2HQeYV51mpJ5EnAIuSjk
+
+
+&gt; Fullset Eu/Fr Sega Master System
+https://mega.nz/#!4kZ2SLyQ!uqHIp152d5X2o-qb5pQoVTGXWRUP6eaHukfFTnH_saY
+
+
+&gt; Fullset Eu/Fr Sega Mega Drive
+https://mega.nz/#!xlgjHRLK!WpzJxua3FpRIFvqTt_beeXNZXXNoEpAZytaEXBK80Jk
+
+
+&gt; Fullset Eu/fr Sega 32X
+https://mega.nz/#!t05VBSKC!faMZ3daYX-5I3kT9mE535nIqoRBkzh1xxLmurt6SxMs
+
+
+&gt; Fullset SG-1000
+https://mega.nz/#!18hQQaAa!p-UPOL72H-dT6jxLto7Lt9RCz7wibCDMdAMrCqgnjgk
+
+
+&gt; Fullset Atari 7800 PAL + BIOS
+https://mega.nz/#!B5hDwK5C!6uR06MPw17LskUQnN_V-ex9WLi-GKuH7v4f4tNZTu7M
+
+
+&gt; Fullset Atari 7800 US
+https://mega.nz/#!VxBA2YCa!LDsF1Km8K8BxYH0dwefjT7hRUgCPD6yA1fSka8CDM4o
+
+
+&gt; Fullset Atari Lynx
+https://mega.nz/#!ptoWSTaa!fOssjg8lpP3zV1PPhkKeFESVAj2LyAphi-sXU9koTQM
+
+
+&gt; Fullset Vectrex
+https://mega.nz/#!wkhBUR5b!jxNjy50ImGOEbCgnQMVmy6bprvy8xtNzC42S-Ozeo_U
+
+
+&gt; Fullset PC-Engine Super GrafX
+https://mega.nz/#!FhhwzSiB!aSYq88u5Pu1-WGIc-6wbshsAtNtgY7PPWkdD43NvqrE
+
+
+&gt; Fullset WonderSwan
+https://mega.nz/#!0lA2mCwZ!PgIU0Yt4X2MkHPkPyUHvBIRWVKST1YTogTHUt8tTRfQ
+
+
+&gt; Fullset WonderSwan Color
+https://mega.nz/#!4hhhgIYZ!2LjGZ0ejUpW73aM3vFDDvATlIWYPQyIhgCmQp4OC0nM
+
+
+&gt; Fullset ColecoVision
+https://mega.nz/#!EoBVQawA!_aAYA6V4IblO2AcObTpZKaGXdj_1uykBgKqSjfPdUBg
+
+
+&gt; Pack de Scrap fba_libretro RECALBOX (17.12.02 - 18.02.09) pour le pack de Mikoz You 
+https://mega.nz/#!kkpEVS4Q!mGQDJGuPUoeIiZkMNiTPy5WiKXKxN4URfGz11UITfrk
+
+
+&gt; Pack de Scrap NeoGeo RECALBOX (17.12.02 - 18.02.09) pour le pack de Mikoz You
+https://mega.nz/#!9tx1WDpB!gqGRmDC4ovUP8i_isdfP2J9cAlq_ilx6QVu7KQrVRM8
+
+
+-&gt; Pack de Scrap MAME 0.139 (2010) RECALBOX (17.12.02 - 18.02.09) pour le pack de Mikoz You
+https://mega.nz/#!Z4BV1CYB!bo5l7HQc9ByJE4FusKjjXoetkAa9TIl8Tlq1LolfKgY
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
         </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="about/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                About
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/thekingofbandit" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/thekingofbandit" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/khanafi" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
 
-    </body>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.39abc4af.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+        <script src="js/extra.js"></script>
+      
+    
+  </body>
 </html>
-
-<!--
-MkDocs version : 1.0.4
-Build Date UTC : 2019-04-29 15:14:40
--->
