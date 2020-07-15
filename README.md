@@ -1,6 +1,6 @@
 # thekingofbandit.github.io
-[tkob.esy.es]: http://tkob.esy.es
-Live website on  **[tkob.esy.es]**
+[thekingofbandit.github.io]: https://thekingofbandit.github.io
+Live website on  **[thekingofbandit.github.io]**
 <p align="left">
 thekingofbandit.github.io is a personal my portofolio project
 </p>
